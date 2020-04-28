@@ -1,0 +1,123 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --main-bg-color: #292929;
+  --gameboard-color: #fff1a4;
+  --text-color: #292929;
+}
+
+body {
+  background: var(--main-bg-color);
+  overflow-y: hidden;
+}
+
+.gameboard {
+  background: var(--gameboard-color);
+  height: 40vw;
+  width: 40vw;
+  margin: 5% auto;
+  border: 1px solid black;
+}
+
+.rows {
+  width: 100%;
+  height: calc(100% / 3);
+  display: flex;
+}
+
+.squares {
+  width: calc(40vw / 3);
+  height: calc(40vw / 3);
+  border: 1px solid black;
+}
+
+span {
+  color: var(--text-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10vw;
+  user-select: none;
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation: portrait) {
+  .gameboard {
+    height: 80vw;
+    width: 80vw;
+    margin: 25% auto;
+  }
+  .squares {
+    width: calc(80vw / 3);
+    height: calc(80vw / 3);
+  }
+  span {
+    font-size: 15vw;
+  }
+}
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+  .gameboard {
+    height: 80vh;
+    width: 80vh;
+    margin: 5% auto;
+  }
+  .squares {
+    width: calc(80vh / 3);
+    height: calc(80vh / 3);
+  }
+  span {
+    font-size: 10vw;
+  }
+}
+@media only screen and (max-device-width: 1366px) and (orientation: landscape) {
+  .gameboard {
+    height: 80vh;
+    width: 80vh;
+    margin: 5% auto;
+  }
+  .squares {
+    width: calc(80vh / 3);
+    height: calc(80vh / 3);
+  }
+  span {
+    font-size: 15vw;
+  }
+}
