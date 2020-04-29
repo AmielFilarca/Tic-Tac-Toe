@@ -74,13 +74,15 @@ const gameboard = (() => {
   };
   const endTurn = () => {
     updateBoard();
-    checkForWinner() === true
-      ? endGame()
-      : checkForTie() === true
-      ? endGame()
-      : nextTurn();
+    if (checkForWinner() || checkForTie()) {
+      endGame();
+    } else {
+      nextTurn();
+      updateBoard();
+    }
   };
   const computerTurn = () => {
+    displayController.removeEventOnSquares();
     const squares = document.querySelectorAll(".squares");
     const emptySquares = Array.prototype.slice
       .call(squares)
