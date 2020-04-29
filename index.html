@@ -9,20 +9,46 @@
   <body>
     <div class="gameboard">
       <div class="rows" id="row1">
-        <div class="squares" id="sq1"><span></span></div>
-        <div class="squares" id="sq2"><span></span></div>
-        <div class="squares" id="sq3"><span></span></div>
+        <div class="squares" id="sq1"></div>
+        <div class="squares" id="sq2"></div>
+        <div class="squares" id="sq3"></div>
       </div>
       <div class="rows" id="row2">
-        <div class="squares" id="sq4"><span></span></div>
-        <div class="squares" id="sq5"><span></span></div>
-        <div class="squares" id="sq6"><span></span></div>
+        <div class="squares" id="sq4"></div>
+        <div class="squares" id="sq5"></div>
+        <div class="squares" id="sq6"></div>
       </div>
       <div class="rows" id="row3">
-        <div class="squares" id="sq7"><span></span></div>
-        <div class="squares" id="sq8"><span></span></div>
-        <div class="squares" id="sq9"><span></span></div>
+        <div class="squares" id="sq7"></div>
+        <div class="squares" id="sq8"></div>
+        <div class="squares" id="sq9"></div>
       </div>
+    </div>
+    <div class="editnames">
+      <input
+        type="text"
+        id="player1-name"
+        name="name"
+        placeholder="Player 1"
+        maxlength="8"
+      />
+      VS
+      <input
+        type="text"
+        id="player2-name"
+        name="name"
+        placeholder="Player 2"
+        maxlength="8"
+      />
+    </div>
+    <div class="radiobuttons">
+      <input type="radio" name="versus" id="computer" checked />
+      <label for="computer">VS Computer</label>
+      <input type="radio" name="versus" id="player" />
+      <label for="player">VS Player</label>
+    </div>
+    <div class="buttons">
+      <button id="start">Start (Spacebar)</button>
     </div>
   </body>
 </html>
