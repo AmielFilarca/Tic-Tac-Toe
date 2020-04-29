@@ -42,6 +42,12 @@ img {
   --text-color: #292929;
 }
 
+.display {
+  width: fit-content;
+  margin: 1% auto;
+  font-size: 8vh;
+}
+
 .buttons {
   width: fit-content;
   margin: 1% auto;
@@ -66,13 +72,14 @@ img {
 body {
   background: var(--main-bg-color);
   color: white;
+  font-family: sans-serif;
 }
 
 .gameboard {
   background: var(--gameboard-color);
   height: 60vh;
   width: 60vh;
-  margin: 5% auto 3%;
+  margin: auto;
   border: 1px solid black;
 }
 

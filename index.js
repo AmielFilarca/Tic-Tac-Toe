@@ -18,9 +18,12 @@ const gameboard = (() => {
   };
   const endGame = () => {
     displayController.removeEventOnSquares();
+    const display = document.querySelector(".display");
     if (checkForWinner()) {
+      display.textContent = `${winner} won!`;
       console.log(`${winner} won!`);
     } else if (checkForTie()) {
+      display.textContent = "Draw!";
       console.log("Draw!");
     }
   };
@@ -159,8 +162,14 @@ const displayController = (() => {
   const onStartBtnClick = () => {
     const playerRadio = document.getElementById("player");
     const computerRadio = document.getElementById("computer");
-    const name1 = document.getElementById("player1-name").value;
-    const name2 = document.getElementById("player2-name").value;
+    let name1 = document.getElementById("player1-name").value;
+    let name2 = document.getElementById("player2-name").value;
+    if (name1 === "") {
+      name1 = "Player 1";
+    }
+    if (name2 === "" || name2 === "Computer") {
+      name2 = "Player 2";
+    }
     if (playerRadio.checked) {
       gameboard.createPlayers(name1, name2);
       gameboard.versusComputer = false;
