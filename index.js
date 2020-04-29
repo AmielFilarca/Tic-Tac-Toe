@@ -162,6 +162,8 @@ const displayController = (() => {
   const onStartBtnClick = () => {
     const playerRadio = document.getElementById("player");
     const computerRadio = document.getElementById("computer");
+    const display = document.querySelector(".display");
+    display.textContent = "Tic-Tac-Toe";
     let name1 = document.getElementById("player1-name").value;
     let name2 = document.getElementById("player2-name").value;
     if (name1 === "") {
